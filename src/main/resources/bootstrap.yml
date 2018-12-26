@@ -1,7 +1,13 @@
+encrypt:
+  key: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
 spring:
   profiles:
     active: prod
   cloud:
+    config:
+      username: arpit
+      password: bhargava
     discovery:
       enabled: true
   application:
@@ -15,4 +21,6 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
-
+security:
+  basic:
+    enabled: true

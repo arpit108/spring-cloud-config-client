@@ -14,12 +14,15 @@ public class ServiceController {
     @Value("${some.other.property}")
     private String someOtherProperty;
 
+    @Value("${prod.server.password}")
+    private String serverPassword;
+
 
     @GetMapping
     @RefreshScope
     public String getProperties()
     {
-        return configProperties.getProperty() +" || " + someOtherProperty;
+        return configProperties.getProperty() +" || " + someOtherProperty+" || "+serverPassword;
     }
 
 
